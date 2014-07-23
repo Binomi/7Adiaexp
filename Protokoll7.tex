@@ -106,6 +106,16 @@
 
 \usepackage{caption}
 
+%Zitate
+%\usepackage[round]{natbib}
+\usepackage{cite}
+
+%keine Einrückung nach leerzeile
+\parindent0pt
+
+%Literaturverzeichnis
+\usepackage{babelbib}
+\selectbiblanguage{ngerman}
 
 \begin{document}
 
@@ -165,7 +175,7 @@ Praktikant:
 
 \section{Theorie}
 \label{sec:theorie}
-
+\cite[S\dots]{prakti}
 
 \section{Durchführung}
 \label{sec:durchfuehrung}
@@ -321,5 +331,7 @@ $$ A = \pi\frac{d^2}{4}$$
 	\end{tabular}
 \end{table}
 
+\bibliography{literatur}
+\bibliographystyle{babalpha}
 
 \end{document}
