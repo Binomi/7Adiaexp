@@ -211,12 +211,53 @@ Teilt man jetzt $c_p$ durch $c_v$, so erhällt man den Adiabatenexponenten $\kap
 \begin{align}
 	\kappa=\frac{c_p}{c_v}=\frac{f+2}{f}
 \end{align}
+Nach der Quelle %Quelle für die Freiheitsgrade angeben
+, ist bekannt, das die drei verwendeten Gase CO$_2$, Argon und Luft, welches zu 75\% aus Stickstoff besteht und darüber approximiert wird, die in Tabelle \ref{tab:kappafrei} aufgeführten und die sich daraus ergebenen $\kappa$ Werte besitzen.
+\begin{table}[!h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+	\hline
+				& CO$_2$	& Argon		& Luft\\
+	\hline\hline
+	Freiheitsgrade f	& 5		& 3		& 5\\
+	$\kappa$		& 1.4		& 1.67		& 1.4\\
+	\hline
+\end{tabular}
+\caption{Freiheitsgrade und $\kappa$ Werte der einzelnen verwendeten Gase}
+\label{tab:kappafrei}
+\end{table}
 
 \subsection{Adiabatenexponent aus Versuchsaufbau}
 
-\subsection{Nach Rüchardt}
+\subsubsection{Nach Rüchardt}
+Bei dem Versuchsaufbau nach Rüchardt wird ein kleiner Körper in schwingung versetzt und die Periodendauer gemessen.
+Aus der Periodendauer T kann anschließend der Adiabatenexponent $\kappa$ bestimmt werden.\\
+Der Körper hat eine Masse m, das Rohr eine Querschnitsfläche von A, das Gas den Druck p und es hersche der Luftdruck a, so ergibt sich für die Gleichgewichtslage des Körpers.
+\begin{align}
+	& mg + a\cdot A = p \cdot A\\
+	\Rightarrow & p=a+\frac{mg}{A}
+\end{align}
+Bewegt sich jetzt der Körper in einer Schwingung um die Strecke $\Delta x$ um die Gleichgewichtslage, so lässt sich die follgende Gleichung für die Bewegung des Körpers auf stellen.
+\begin{align}
+	m\ddot{x}=A\cdot dp
+\end{align}
+Dadurch, dass der Prozess Adiabatisch erfolt gilt pV$^\kappa$=const und es lässt sich nach Differentiation von V die folgende Gleichung aufstellen.
+\begin{align}
+	& dp=-\kappa p \frac{dV}{V}=-\kappa \frac{pA\Delta x}{V}\\
+	\Rightarrow & m \ddot{x}=-\kappa\frac{pA^2\Delta x}{V}
+\end{align}
+Aus dieser Gleichung folgt jetzt dierekt die Gleichung für die Periodendauer T aus der Frequenz $\omega$, die sich durch umstellen der Gleichung nach $m\ddot{x}+\omega^2 \Delta x=\ddot{x} + \frac{\kappa pA^2}{mV}\Delta x$ ergibt.
+\begin{align}
+	& T = 2\pi\sqrt{\frac{mV}{\kappa pA^2}}
+	\Rightarrow & \kappa = \frac{4\pi^2m_\text{eff}V}{A^2pT^2}
+\end{align}
+Durch umstellen ergibt sich die Formel für $\kappa$.
+Hierbei wird die effektive Masse m$_\text{eff}$ verwendet, die auch die Masse des bewegten Gases $m_\text{L}$ mit einberechnet.
+\begin{align}
+	m_\text{eff} = m + m_\text{L}
+\end{align}
 
-\subsection{Nach Clement-Desormes}
+\subsubsection{Nach Clement-Desormes}
 
 \cite[S.$\infty$]{prakti}
 
