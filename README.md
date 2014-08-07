@@ -1,4 +1,0 @@
-7Adiaexp
-========
-
-Adiabatenexponent
