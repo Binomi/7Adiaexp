@@ -324,7 +324,7 @@ Des Weiteren nehmen wir die in der Tabelle angegebenen Werte für die Dichte von
 	\caption{Den Aufbau kennzeichnende Werte und Konstanten}
 	\label{tab:RuechardtWerte}	
 \end{table}
-In Tabelle \ref{tab:RuechardtAmpl} sind die mit gemessenen Amplituden des Schwingkörpers für die verschiedenen Gase zu finden.
+In Tabelle \ref{tab:RuechardtAmpl} sind die gemessenen Amplituden des Schwingkörpers für die verschiedenen Gase zu finden.
 \begin{table}[!hbt]
 	\centering
 	\begin{tabular}{|c|c|}
@@ -342,19 +342,22 @@ In Tabelle \ref{tab:RuechardtAmpl} sind die mit gemessenen Amplituden des Schwin
 \end{table}
 
 Mit folgenden Formeln kann man nun über die Masse, welche effektiv schwingt, und den daraus resultierenden Druck $\kappa$ berechnen.
-$$ A = \pi\frac{d^2}{4}$$
-
+Zur Masse wird noch die Masse der schwingenden Luftsäule addiert.
 \begin{align}
 	m_{\text{eff}}&= m + \rho_L \cdot A \cdot l\\
 	\sigma_{m_\text{eff}}&=\rho_L \cdot A \cdot \sigma_l
 \end{align}
+Dabei ist $ A = \pi\frac{d^2}{4}$ mit dem Rohrdurchmesser $d$.
 
+
+Für den resultierenden Druck muss zum Umgebungsdruck noch der von der effektiven Masse erzeugte Druck addiert werden.
 \begin{align}
 	p &= b + m_{\text{eff}} \cdot \frac{g}{A}\\
 	\sigma_p &= \sqrt{\sigma_b^2+\sigma_{m_{\text{eff}}}^2 \cdot \left(\frac{g}{A}\right)^2}\\
 	&=\sqrt{\sigma_b^2+\left(\rho_L \cdot g\right)^2 \cdot \sigma_l^2 }
 \end{align}
 
+In der Tabelle \ref{tab:RuechardtMasseDruck} findet man die effektiven Massen und Drücke für die verschiedenen Gase, die nach obigen Formeln berechnet wurde.
 \begin{table}[!hbt]
 	\centering
 	\begin{tabular}{|c|c|c|}
@@ -371,16 +374,19 @@ $$ A = \pi\frac{d^2}{4}$$
 	\label{tab:RuechardtMasseDruck}
 \end{table}
 
-
+Mit diesen Wert kann nun $\kappa$ berechnet werden:
 \begin{align}
 	\kappa&=\frac{64 \cdot m_{\text{eff}}\cdot V }{T^{2} \cdot p \cdot d^{4}}\\
 	\sigma_{\kappa}&=\frac{64 ~ V}{T^{3} ~ d^{4} ~ p^{2}} \cdot \sqrt{\left(T ~ m_{\text{eff}}\right)^2 \cdot \sigma_{p}^{2} + \left(T ~ p\right)^2 \cdot \sigma_{m_{\text{eff}}}^{2} + \left(2~m_{\text{eff}}~p\right)^{2} \cdot \sigma_{T}^{2}}
 \end{align}
 
+Und aus $\kappa$ folgt die Anzahl der Freiheitsgrade $f$:
 \begin{align}
 	f&=\frac{2}{\kappa - 1}\\
 	\sigma_{f}&=\frac{2 \cdot \sigma_{\kappa}}{\left(\kappa - 1\right)^{2}}
 \end{align}
+
+Die Endresultate $\kappa$ und $f$, die mit dieser Messmethode gewonnen wurden, befinden sich in Tabelle \ref{tab:RuechardtKappaF}. 
 
 \begin{table}[!hbt]
 	\centering
@@ -429,6 +435,29 @@ Betrachtet man beide Messungen, um $\kappa$ von Luft genauer zu bestimmen, ergib
 
 \section{Diskussion}
 \label{sec:diskussion}
+
+\subsection{Rüchardt}
+Vergleicht man die Literaturwerte für die Freiheitsgrade und den Adiabatenexponent $\kappa$ der drei verschiedenen Gase aus Tabelle \ref{tab:kappafrei} mit den Messergebnissen aus Tab. \ref{tab:RuechardtKappaF}, fällt auf, dass die Messung sehr genau war und gute Resultate liefert.
+So ist die Abweichung bei den $\kappa$-Werten kleiner $5\%$ und die für die Freiheitsgrade kleiner $15\%$.
+Die ungenaueste Messung ist die von Argon.
+Dabei haben wir zuerst bei den großen Schwingungszahlen angefangen und zum Schluss waren die Einzelschwingungen dran.
+Also die umgekehrte Reihenfolge - im Gegensatz zu den beiden anderen Messungen.
+Es scheint, dass die zuerst gemachten Messungen ungenauer sind.
+Dies wirkt sich dann auf die vermeintlich genauen Messungen mit vielen Schwingungen aus.
+All dies kann man bei den Werten aus Tabelle \ref{tab:RuechardtGenauer} im Anhang nachvollziehen.\\
+Die Literaturwerte liegen jedoch nicht in den Fehlerintervallen.
+Die Fehler wurden also etwas unterschätzt.
+
+\subsection{Clement-Desormes}
+Dieser Teilversuch liefert nicht so gute Ergebnisse für $\kappa$ von Luft.
+So beträgt die Abweichung zum Literaturwert 1.4 bei allen 3 Messungen etwa $15\%$.
+Dies lässt einen systematischen Fehler vermuten.
+Eventuell wurde nicht lange genug gewartet, bevor der Temperaturausgleich abgeschlossen war und so das Manometer zu früh abgelesen.
+
+\subsection{Mittelwert für $\kappa_\text{Luft}$ aus beiden Messungen}
+Da die Messung nach Rüchardt sehr genau und gut ist, ist auch der Mittelwert aus beiden Messmethoden mit einer Abweichung von $0.3\%$ nah am Literaturwert.
+Dieser liegt jedoch nicht im Fehlerintervall.
+Wie zuvor schon angemerkt sind die Fehler unterschätzt worden.
 
 \section{Anhang}
 \begin{table}[!htb]
