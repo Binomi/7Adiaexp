@@ -172,7 +172,7 @@ Praktikant:
 \section{Einleitung}
 \label{sec:einleitung}
 Der Adiabatenexponent ist ein Ausdruck, der durch die Anzahl der Freiheitsgrade eines Gasen bestimmt wird. 
-Alternativ kann dieser auch über die spezifische Wärme eines Gases bestimmt werden.
+Alternativ kann dieser auch über die spezifische Wärme eines Gases, welche eine Konstante ist, bestimmt werden.
 Wir wollen in diesem Versuch auf zwei verschiedene Arten diesen Adiabatenexponenten $\kappa$ bestimmen.
 Der erste Versuchsaufbau ist der Aufbau nach Rüchardt und der zweite ist nach Clement-Desormes.
 
@@ -187,6 +187,7 @@ Dies vereinfacht die Darstellung von Gesetzen und ermöglicht es die Ideale Gasg
 	pV=Nk_BT=nRT\label{eq:ideal}
 \end{align}
 Hierbei ist die Anzahl der Teilchen N und die Boltzmannkonstante k$_B$ zusammengefasst zu R=N$_A$k$_B$, wobei N$_A$ die Advogardokonstante ist n die Stoffmenge.
+\cite[S. 261]{gerthsen}
 
 \subsection{Zustandsänderung in Gasen}
 Die Ideale Gasgleichung \eqref{eq:ideal} gilt für ein ideales Gas immer, dennoch kann es sich auf verschiedene Zustandsänderungen verschieden verhalten.
@@ -197,12 +198,9 @@ Die hier interessantere Änderung ist aber die adiabatische Änderung.
 Hierbei bleibt die Temperatur konstant und es ändern sich Druck und Volumen, doch das Verhältnis zwischen den beiden bleibt gleich.
 Dies ist im allgemeinen sehr schwierig zu realisieren, doch es gibt mittlerweile recht gute Isolierungen, oder der Prozess, der adiabatisch ablaufen soll, wird sehr schnell ausgeführt.
 
-\subsection{Herleitung der Poisson-Gleichung}
-
-
 \subsection{Freiheitsgrade}
 Die Spezifische Wärme eines Gases ist eine Konstante und aus dieser lässt sich mithilfe der Freiheitsgrade und der Konstanten R, wie oben beschrieben, die Konstante $\kappa$ erstellt.
-Die Zusammenhänge ergeben sich aus diesen beiden Formel %Quelle hinzufuegen
+Die Zusammenhänge ergeben sich aus diesen beiden Formel \cite[S. 262]{gerthsen}
 \begin{align}
 	c_v=\frac{f}{2}R\\
 	c_p=\left(\frac{f}{2}+1\right)R
@@ -211,8 +209,7 @@ Teilt man jetzt $c_p$ durch $c_v$, so erhält man den Adiabatenexponenten $\kapp
 \begin{align}
 	\kappa=\frac{c_p}{c_v}=\frac{f+2}{f}
 \end{align}
-Nach der Quelle %Quelle für die Freiheitsgrade angeben
-, ist bekannt, das die drei verwendeten Gase CO$_2$, Argon und Luft, welches zu 75\% aus Stickstoff besteht und darüber approximiert wird, die in Tabelle \ref{tab:kappafrei} aufgeführten und die sich daraus ergebenen $\kappa$ Werte besitzen.
+Betrachtet man Atome als Punktteilchen, so ist bekannt, das die drei verwendeten Gase CO$_2$, Argon und Luft, welches zu 75\% aus Stickstoff besteht und darüber approximiert wird, die in Tabelle \ref{tab:kappafrei} aufgeführten und die sich daraus ergebenen $\kappa$ Werte besitzen.
 \begin{table}[!h]
 \centering
 \begin{tabular}{|c|c|c|c|}
@@ -258,15 +255,53 @@ Hierbei wird die effektive Masse m$_\text{eff}$ verwendet, die auch die Masse de
 \end{align}
 
 \subsubsection{Nach Clement-Desormes}
+Aus dem Versuchsaufbau \ref{sec:clem} kann man die 4 Zustände Ablesen.
+Zu Begin herscht das normale Volumen V$_0$ des Zylinders mit der Raumtemperatur T$_0$ und dem Druck p$_0$, welcher der Raumdruck b ist.
+Nach dem erzeugen des Überdrucks $\Delta$p und dem Temperaturausgleich herscht im Zustand 1 der Druck $p=b+\Delta p_1$.
+Durch das Öffnen des Entlastungsventils sinkt der Druck und somit auch die Temperatur in Zustand 2.
+Durch den nun folgenden Druckausgleich kommen wir wieder auf das Volumen v$_0$ in Zustand 3.
+Nach dem letzten Temperaturausgleich erhalten wir im Zustand 4 eine Druckänderung um $\Delta p_2$.\\
+Zustand 1: V=$V_0$, p=b+$\Delta p_1$, T=T$_0$\\
+Zustand 2: V=$V_0+\Delta V$, p = b, T=$T_0-\Delta T$\\
+ZUstand 3: V=$V_0$, p=b, T=$T_0-\Delta T$\\
+Zustand 4: V=$V_0$, p=b+$\Delta p_2$, T=$T_0$\\
 
-\cite[S.$\infty$]{prakti}
+Dadurch, dass wir adiabtisch von 1 nach 2 kommen könne wir die Poisson-Gleichung anwenden.
+\begin{align}
+	(b+\Delta p_1)V_0^\kappa &= b(V_0 + \Delta V)^\kappa\label{eq:vol}\\
+	(T_0-\Delta T)(V_0+\Delta V)^{\kappa-1}&=T_0\cdot v_0^{\kappa-1}\label{eq:temp}
+\end{align}
+Nimmt man jetzt an, dass $\Delta V \ll V_0$, so ergibt sich die unten aufgeführte Gleichung.
+\begin{align}
+	(V_0+\Delta V)^\kappa=V_0^\kappa\left(1+\frac{\Delta V}{V_0}\right)^\kappa \approx V_0^\kappa+\kappa V_0^{\kappa-1}\cdot \Delta V
+\end{align}
+So lassen sich jetzt auch die Gleichungen \eqref{eq:vol} und \eqref{eq:temp} wie unten angegeben umformen.
+\begin{align}
+	\frac{\Delta p_1}{b}&=\kappa\frac{\Delta V}{V_0}\\
+	\frac{\Delta T}{T_0}&=(\kappa-1)\frac{\Delta V}{V_0}\\
+	\Rightarrow \frac{\Delta T}{T_0}&=\frac{\kappa -1}{\kappa}\cdot\frac{\delta p_1}{b}\label{eq:ges}
+\end{align}
+Durch den Umstand, dass Zustand 3 in 4 isochor übergeht können wir beide mit der Ideal-Gasgleichung verknüpfen.
+\begin{align}
+	\frac{b}{b+\Delta p_2}=\frac{T_0-\Delta T}{T_0}=1-\frac{\Delta T}{T_0}
+\end{align}
+Durch einsetzen von \eqref{eq:ges} und umstellen nach $\kappa$ erhält man die Form, wie sie unten gezeigt ist.
+\begin{align}
+	\kappa=\frac{\Delta p_1}{\Delta p_1-\Delta p_2}\label{eq:clem}
+\end{align}
 
 \section{Durchführung}
 \label{sec:durchfuehrung}
 
 \subsection{Adiabatenexponent nach Rüchardt}
+\begin{figure}
+	\centering
+	\includegraphics{3725}
+	\caption{Bild der beiden Versuchsaufbauten\protect\footnotemark}\label{fig:versuch}
+\end{figure}
+\footnotetext{Quelle: https://lp.uni-goettingen.de/get/text/3639 29.08.2014 20:08 Uhr}
 Der Versuch besteht aus einer Glaskugel, die nach oben hin eine lange dünne Zylindrische Öffnung hat.
-Der Aufbau ist in der Graphik %ref auf Graphik
+Der Aufbau ist in der Graphik \ref{fig:versuch}
 zu sehen.
 Zum Einlassen des Gases existiert eine Zuleitung, welche über eine Druckkopplungsventil mit drei verschiedenen Gasquellen an der Wand verbunden werden kann.
 Am langen Rohr oberhalb der Kugel ist eine Lichtschranke befestigt und es gibt einen kleinen Schlitz unterhalb der Lichtschranke, um das Gas entweichen lassen zu können.
@@ -283,8 +318,8 @@ Man beginnt jeweils wieder mit dem Durchspülen der Kugel.
 Es ist schließlich noch nötig die Masse des kleinen Körpers, der Rohrinnendurchmesser und das Volumen von Kolben und Rohr zu notieren.
 
 \subsection{Adiabatenexponent nach Clement-Desormes}
-Der Versuchsaufbau ist ebenfalls in der Graphik %ref auf Graphik
-von oben zu sehen.
+\label{sec:clem}
+Der Versuchsaufbau ist ebenfalls in der Graphik \ref{fig:versuch} von oben zu sehen.
 Dieser Aufbau besteht aus einem großen Glaszylinder und einem Manometer.
 Zu dem gibt es noch ein Entlüftungs- und Verschlussventil und einen Blasebalg zum erzeugen des Drucks.\\
 Zu Beginn des Versuches ist das Verschlussventil zu öffnen und mit dem Blasebalg ein höherer Druck zu erzeugen.
