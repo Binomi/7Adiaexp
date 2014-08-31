@@ -172,7 +172,7 @@ Praktikant:
 \section{Einleitung}
 \label{sec:einleitung}
 Der Adiabatenexponent ist ein Ausdruck, der durch die Anzahl der Freiheitsgrade eines Gasen bestimmt wird. 
-Alternativ kann dieser auch über die spezifische Wärme eines Gases, welche eine Konstante ist, bestimmt werden.
+Alternativ kann dieser auch über die spezifische Wärme eines Gases, welche eine Konstante ist, ermittelt werden.
 Wir wollen in diesem Versuch auf zwei verschiedene Arten diesen Adiabatenexponenten $\kappa$ bestimmen.
 Der erste Versuchsaufbau ist der Aufbau nach Rüchardt und der zweite ist nach Clement-Desormes.
 
@@ -191,12 +191,11 @@ Hierbei ist die Anzahl der Teilchen N und die Boltzmannkonstante k$_B$ zusammeng
 
 \subsection{Zustandsänderung in Gasen}
 Die Ideale Gasgleichung \eqref{eq:ideal} gilt für ein ideales Gas immer, dennoch kann es sich bei verschiedenen Zustandsänderungen verschieden verhalten.
-Bleibt z.B.  der Druck p konstant, so ist das Volumen V proportional zur Temperatur T.
+Bleibt z.B.  der Druck p konstant, so ist das Volumen V proportional zur Temperatur T (V$\propto$T).
 Diese Zustandsänderung wird als isobar bezeichnet.
-Bleibt hingegen das Volumen konstant, so spricht man von einer isochoren Zustandsänderung.
+Bleibt hingegen das Volumen konstant, so spricht man von einer isochoren Zustandsänderung (p$\propto$T).
 Die hier interessantere Änderung ist aber die adiabatische Änderung.
-Hierbei bleibt die Temperatur konstant und es ändern sich Druck und Volumen, doch das Verhältnis %Produkt???
-zwischen den beiden bleibt gleich.
+Hierbei bleibt die Energie konstant und es ändern sich Druck und Volumen, doch das Verhältnis $p\cdot V^\kappa=\text{const}$ zwischen den beiden bleibt gleich und ist nur von der Konstanten $\kappa$ beeinflussbar.
 Dies ist im allgemeinen sehr schwierig zu realisieren, doch es gibt mittlerweile recht gute Isolierungen, oder der Prozess, der adiabatisch ablaufen soll, wird sehr schnell ausgeführt.
 
 \subsection{Freiheitsgrade}
@@ -206,12 +205,14 @@ Die Zusammenhänge ergeben sich aus diesen beiden Formel \cite[S. 262]{gerthsen}
 	c_v=\frac{f}{2}R\\
 	c_p=\left(\frac{f}{2}+1\right)R
 \end{align}
-Teilt man jetzt $c_p$ durch $c_v$, so erhält man den Adiabatenexponenten $\kappa$, welcher durch konstanten festgelegt ist.
+Teilt man jetzt $c_p$ durch $c_v$, so erhält man den Adiabatenexponenten $\kappa$, welcher durch Konstanten festgelegt ist.
 \begin{align}
 	\kappa=\frac{c_p}{c_v}=\frac{f+2}{f}
 	\label{eq:kappa(f)}
 \end{align}
-Betrachtet man Atome als Punktteilchen, so ist bekannt, das die drei verwendeten Gase CO$_2$, Argon und Luft, welches zu 75\% aus Stickstoff besteht und darüber approximiert wird, die in Tabelle \ref{tab:kappafrei} aufgeführten und die sich daraus ergebenen $\kappa$ Werte besitzen.
+Die Freiheitsgrade ergeben sich aus den Bewegungsmöglichkeiten des Punktes.
+Diese beginnen bei 3 der x-y-z Bewegung für den einfachen Punkt und werden um die Schwingungsmöglichkeiten mehrerer Punkte erweitert.\\
+Betrachtet man Atome als Punktteilchen, so ist bekannt, das die drei verwendeten Gase CO$_2$ (3 Atomig), Argon (1 atomig) und Luft, welches zu 75\% aus Stickstoff (2 atomig) besteht und darüber approximiert wird, die in Tabelle \ref{tab:kappafrei} aufgeführten und die sich daraus ergebenen $\kappa$ Werte besitzen.
 \begin{table}[!h]
 \centering
 \begin{tabular}{|c|c|c|c|}
@@ -230,22 +231,22 @@ Betrachtet man Atome als Punktteilchen, so ist bekannt, das die drei verwendeten
 
 \subsubsection{Nach Rüchardt}
 Bei dem Versuchsaufbau nach Rüchardt wird ein kleiner Körper in schwingung versetzt und die Periodendauer gemessen.
-Aus der Periodendauer T kann anschließend der Adiabatenexponent $\kappa$ bestimmt werden.\\
-Der Körper hat eine Masse m, das Rohr eine Querschnittsfläche von A, das Gas den Druck p und es hersche der Luftdruck a, so ergibt sich für die Gleichgewichtslage des Körpers.
+Aus der Periodendauer T kann anschließend der Adiabatenexponent $\kappa$ bestimmt werden, siehe auch Versuchsaufbau in Kapitel \ref{sec:ruech}.\\
+Der Körper hat eine Masse m, das Rohr eine Querschnittsfläche von A, das Gas den Druck p und es hersche der Luftdruck a, so ergibt sich für die Gleichgewichtslage des Körpers die unten aufgeführte Gleichung nach den Newton Gesetzen.
 \begin{align}
 	& mg + a\cdot A = p \cdot A\\
 	\Rightarrow & p=a+\frac{mg}{A}
 \end{align}
-Bewegt sich jetzt der Körper in einer Schwingung um die Strecke $\Delta x$ um die Gleichgewichtslage, so lässt sich die folgende Gleichung für die Bewegung des Körpers auf stellen.
+Bewegt sich jetzt der Körper in einer Schwingung um die Strecke $\Delta x$ um die Gleichgewichtslage, so lässt sich die folgende Gleichung für die Bewegung des Körpers aus der allgemeinen Schwingungsgleichung auf stellen.
 \begin{align}
 	m\ddot{x}=A\cdot dp
 \end{align}
-Dadurch, dass der Prozess adiabatisch erfolgt, gilt pV$^\kappa$=const und es lässt sich nach Differentiation von V die folgende Gleichung aufstellen.
+Dadurch, dass der Prozess adiabatisch erfolgt, gilt pV$^\kappa$=const und es lässt sich nach Differentiation von V und verwenden der Differenziale dp und dV die folgende Gleichung aufstellen.
 \begin{align}
 	& dp=-\kappa p \frac{dV}{V}=-\kappa \frac{pA\Delta x}{V}\\
 	\Rightarrow & m \ddot{x}=-\kappa\frac{pA^2\Delta x}{V}
 \end{align}
-Aus dieser Gleichung folgt jetzt direkt die Gleichung für die Periodendauer T aus der Frequenz $\omega$, die sich durch umstellen der Gleichung nach $m\ddot{x}+\omega^2 \Delta x=\ddot{x} + \frac{\kappa pA^2}{mV}\Delta x$ ergibt.
+Aus dieser Gleichung folgt jetzt direkt die Gleichung für die Periodendauer T aus der Frequenz $\omega$, die sich durch umstellen der Gleichung nach $m\ddot{x}+\omega^2 \Delta x=\ddot{x} + \frac{\kappa pA^2}{mV}\Delta x$ aus dem Wissen über Schwingungsgleichungen ergibt ergibt.
 \begin{align}
 	& T = 2\pi\sqrt{\frac{mV}{\kappa pA^2}}\\
 	\Rightarrow & \kappa = \frac{4\pi^2m_\text{eff}V}{A^2pT^2} 
@@ -260,8 +261,8 @@ Hierbei wird die effektive Masse m$_\text{eff}$ verwendet, die auch die Masse de
 \subsubsection{Nach Clement-Desormes}
 Aus dem Versuchsaufbau \ref{sec:clem} kann man die 4 Zustände Ablesen.
 Zu Begin herscht das normale Volumen V$_0$ des Zylinders mit der Raumtemperatur T$_0$ und dem Druck p$_0$, welcher der Raumdruck b ist.
-Nach dem erzeugen des Überdrucks $\Delta$p und dem Temperaturausgleich herscht im Zustand 1 der Druck $p=b+\Delta p_1$.
-Durch das Öffnen des Entlastungsventils sinkt der Druck und somit auch die Temperatur in Zustand 2.
+Nach dem erzeugen des Überdrucks $\Delta p_1$ und dem Temperaturausgleich herscht im Zustand 1 der Druck $p=b+\Delta p_1$.
+Durch das Öffnen des Entlastungsventils sinkt der Druck und somit auch die Temperatur in Zustand 2 adiabatisch.
 Durch den nun folgenden Druckausgleich kommen wir wieder auf das Volumen v$_0$ in Zustand 3.
 Nach dem letzten Temperaturausgleich erhalten wir im Zustand 4 eine Druckänderung um $\Delta p_2$.\\
 Zustand 1: V=$V_0$, p=b+$\Delta p_1$, T=T$_0$\\
@@ -269,7 +270,7 @@ Zustand 2: V=$V_0+\Delta V$, p = b, T=$T_0-\Delta T$\\
 ZUstand 3: V=$V_0$, p=b, T=$T_0-\Delta T$\\
 Zustand 4: V=$V_0$, p=b+$\Delta p_2$, T=$T_0$\\
 
-Da der Prozess von 1 nach 2 adiabtisch abläuft, können wir die Poisson-Gleichung anwenden.
+Da der Prozess von 1 nach 2 adiabtisch abläuft, können wir die Poisson-Gleichung anwenden.\cite[S. 319]{demtroeder}
 \begin{align}
 	(b+\Delta p_1)V_0^\kappa &= b(V_0 + \Delta V)^\kappa\label{eq:vol}\\
 	(T_0-\Delta T)(V_0+\Delta V)^{\kappa-1}&=T_0\cdot v_0^{\kappa-1}\label{eq:temp}
@@ -297,6 +298,7 @@ Durch einsetzen von \eqref{eq:ges} und umstellen nach $\kappa$ erhält man die F
 \label{sec:durchfuehrung}
 
 \subsection{Adiabatenexponent nach Rüchardt}
+\label{sec:ruech}
 \begin{figure}
 	\centering
 	\includegraphics{3725}
@@ -326,15 +328,15 @@ Diese Angaben sind auf dem Aufbau vermerkt.
 Der Versuchsaufbau ist ebenfalls in der Graphik \ref{fig:versuch} von oben zu sehen.
 Dieser Aufbau besteht aus einem großen Glaszylinder und einem Manometer.
 Zu dem gibt es noch ein Entlüftungs- und Verschlussventil und einen Blasebalg zum Erzeugen des Drucks.\\
-Zu Beginn des Versuches ist das Verschlussventil zu öffnen und mit dem Blasebalg ein höherer Druck zu erzeugen.
+Zu Beginn des Versuches und jeder Messung ist das Verschlussventil zu öffnen und mit dem Blasebalg ein höherer Druck zu erzeugen.
 Ist der gewünschte Druck erreicht, so verschließt man das Verschlussventil und führe einen Temperaturausgleich durch.
 Für diesen, wird eine Weile lang gewartet, bis sich die Temperatur im Zylinder mit der der Umwelt ausgeglichen hat.
 Anschließend notiert man sich die Höhendifferenz auf dem Manometer.\\
 Es werden jetzt je 3 Messungen für verschiedene Öffnungszeiten des Entlüftungsventils gemacht.
-Hierzu wird dieses für ca. 0.1s, 1s und 5s geöffnet.
+Hierzu wird dieses für ca. 0.1s, 1s und 5s jeh geöffnet.
 Nach dem kurzen Öffnen und Schließen ist wieder ein Temperaturausgleich durch zu führen.
 Danach wird dann wieder die Höhendifferenz aufgeschrieben.
-Es wird wieder, wie oben geschrieben, der Druck erhöht und mit der Messreihe fortgefahren, bis alle Messungen durchgeführt sind.
+Es wird wieder, wie oben geschrieben, der Druck erhöht und mit der Messreihe fortgefahren, bis alle 3 Messungen jeder Öffnungszeit durchgeführt sind.
 Wichtig ist hierbei stets den Temperaturausgleich zu machen und vor jeder neuen Messung neuen Druck auf zu bauen.
 
 \section{Auswertung}
@@ -489,12 +491,16 @@ Es scheint, dass die zuerst gemachten Messungen ungenauer sind.
 Dies wirkt sich dann auf die vermeintlich genauen Messungen mit vielen Schwingungen aus.
 All dies kann man bei den Werten aus Tabelle \ref{tab:RuechardtGenauer} im Anhang nachvollziehen.\\
 Da die Literaturwerte  jedoch nicht in den Fehlerintervallen liegen, wurden die Fehler etwas unterschätzt.
+Es wäre eine größere Ungenauigkeit in der Amplitude von etwa 1cm bis 2cm besser gewesen.
 
 \subsection{Clement-Desormes}
 Dieser Teilversuch liefert nicht so gute Ergebnisse für $\kappa$ von Luft.
 So beträgt die Abweichung zum Literaturwert 1.4 bei allen 3 Messungen etwa $15\%$.
 Dies lässt einen systematischen Fehler vermuten.
-Eventuell wurde nicht lange genug gewartet, bevor der Temperaturausgleich abgeschlossen war und so das Manometer zu früh abgelesen.
+Eventuell wurde nicht lange genug gewartet, bevor der Temperaturausgleich abgeschlossen war und so das Manometer zu früh abgelesen.\\
+Eine andere Möglichkeit ist, dass die Öffnungszeiten einer Messreihe nicht genau waren.
+Streuen die Zeiten zu stark um den eigentlich zu erreichenden Wert, so tun dies auch die errechneten Werte.
+Abhilfe würde ein elektronisches Ventil schaffen, dass sich genau einstellen lässt.
 
 \subsection{Mittelwert für $\kappa_\text{Luft}$ aus beiden Messungen}
 Da die Messung nach Rüchardt sehr genau und gut ist, ist auch der Mittelwert aus beiden Messmethoden mit einer Abweichung von $0.3\%$ nah am Literaturwert.
