@@ -209,6 +209,7 @@ Die Zusammenhänge ergeben sich aus diesen beiden Formel \cite[S. 262]{gerthsen}
 Teilt man jetzt $c_p$ durch $c_v$, so erhält man den Adiabatenexponenten $\kappa$, welcher durch konstanten festgelegt ist.
 \begin{align}
 	\kappa=\frac{c_p}{c_v}=\frac{f+2}{f}
+	\label{eq:kappa(f)}
 \end{align}
 Betrachtet man Atome als Punktteilchen, so ist bekannt, das die drei verwendeten Gase CO$_2$, Argon und Luft, welches zu 75\% aus Stickstoff besteht und darüber approximiert wird, die in Tabelle \ref{tab:kappafrei} aufgeführten und die sich daraus ergebenen $\kappa$ Werte besitzen.
 \begin{table}[!h]
@@ -246,8 +247,9 @@ Dadurch, dass der Prozess adiabatisch erfolgt, gilt pV$^\kappa$=const und es lä
 \end{align}
 Aus dieser Gleichung folgt jetzt direkt die Gleichung für die Periodendauer T aus der Frequenz $\omega$, die sich durch umstellen der Gleichung nach $m\ddot{x}+\omega^2 \Delta x=\ddot{x} + \frac{\kappa pA^2}{mV}\Delta x$ ergibt.
 \begin{align}
-	& T = 2\pi\sqrt{\frac{mV}{\kappa pA^2}}
-	\Rightarrow & \kappa = \frac{4\pi^2m_\text{eff}V}{A^2pT^2}
+	& T = 2\pi\sqrt{\frac{mV}{\kappa pA^2}}\\
+	\Rightarrow & \kappa = \frac{4\pi^2m_\text{eff}V}{A^2pT^2} 
+	\label{eq:kappaR}
 \end{align}
 Durch umstellen ergibt sich die Formel für $\kappa$.
 Hierbei wird die effektive Masse m$_\text{eff}$ verwendet, die auch die Masse des bewegten Gases $m_\text{L}$ mit einberechnet.
@@ -411,19 +413,21 @@ In der Tabelle \ref{tab:RuechardtMasseDruck} findet man die effektiven Massen un
 	\label{tab:RuechardtMasseDruck}
 \end{table}
 
-Mit diesen Wert kann nun $\kappa$ berechnet werden:
+Mit diesen Werten kann nun nach Formel \eqref{eq:vol} $\kappa$ berechnet werden.
+Aus den angenommenen Fehlern $\sigma_p$, $\sigma_{m_\text{eff}}$ und $\sigma_T$ folgt mit der Fehlerfortpflanzung:
 \begin{align}
-	\kappa&=\frac{64 \cdot m_{\text{eff}}\cdot V }{T^{2} \cdot p \cdot d^{4}}\\
 	\sigma_{\kappa}&=\frac{64 ~ V}{T^{3} ~ d^{4} ~ p^{2}} \cdot \sqrt{\left(T ~ m_{\text{eff}}\right)^2 \cdot \sigma_{p}^{2} + \left(T ~ p\right)^2 \cdot \sigma_{m_{\text{eff}}}^{2} + \left(2~m_{\text{eff}}~p\right)^{2} \cdot \sigma_{T}^{2}}
 \end{align}
 
-Und aus $\kappa$ folgt die Anzahl der Freiheitsgrade $f$:
+Und aus $\kappa$ folgt die Anzahl der Freiheitsgrade $f$, indem \eqref{eq:kappa(f)} nach $f$ umgestellt wird.
 \begin{align}
 	f&=\frac{2}{\kappa - 1}\\
 	\sigma_{f}&=\frac{2 \cdot \sigma_{\kappa}}{\left(\kappa - 1\right)^{2}}
 \end{align}
 
-Die Endresultate $\kappa$ und $f$, die mit dieser Messmethode gewonnen wurden, befinden sich in Tabelle \ref{tab:RuechardtKappaF}. 
+Die Endresultate $\kappa$ und $f$, die mit dieser Messmethode gewonnen wurden, befinden sich in Tabelle \ref{tab:RuechardtKappaF}.
+Dabei sind dies schon die gewichteten Mittelwerte aus den Messungen bei verschiedenen Schwingungsdauern.
+In Tabelle \ref{tab:RuechardtGenauer} findet man die gewichteten Mittelwerte für jede Schwingungsanzahl als Zwischenergebnisse.
 
 \begin{table}[!hbt]
 	\centering
@@ -443,12 +447,13 @@ Die Endresultate $\kappa$ und $f$, die mit dieser Messmethode gewonnen wurden, b
 
 
 \subsection{Clement-Desormes}
-
+Die Druckdifferenzen $\Delta p$ in \eqref{eq:clem} sind proportional zu den Höhendifferenzen des Manometers $\Delta h$.
+So wird folgende Formel und die zugehörige Fehlerformel verwendet, um $\kappa$ zu berechnen.
 \begin{align}
 	\kappa&=\frac{\Delta h_{1}}{\Delta h_{1} - \Delta h_{2}}\\
 	\sigma_{\kappa}&=\frac{1}{\left(\Delta h_{1} - \Delta h_{2}\right)^{2}} \cdot \sqrt{\Delta h_{1}^{2} \cdot \sigma_{\Delta h_2}^{2} + \Delta h_{2}^{2} \cdot \sigma_{\Delta h_1}^{2}}
 \end{align}
-
+Die gewichteten Mittelwerte für $\kappa$ der drei Messungen, die bei den unterschiedlichen Öffnungszeiten gemacht wurden, findet man in Tabelle \ref{tab:CDKappa} wieder.
 \begin{table}[!htb]
 	\centering
 	\begin{tabular}{|c|c|}
@@ -476,14 +481,14 @@ Betrachtet man beide Messungen, um $\kappa$ von Luft genauer zu bestimmen, ergib
 \subsection{Rüchardt}
 Vergleicht man die Literaturwerte für die Freiheitsgrade und den Adiabatenexponent $\kappa$ der drei verschiedenen Gase aus Tabelle \ref{tab:kappafrei} mit den Messergebnissen aus Tab. \ref{tab:RuechardtKappaF}, fällt auf, dass die Messung sehr genau war und gute Resultate liefert.
 So ist die Abweichung bei den $\kappa$-Werten kleiner $5\%$ und die für die Freiheitsgrade kleiner $15\%$.
+Da die Zahl der Freiheitsgrade natürlich sein muss, erhält man bei allen drei Gasen das richtige Ergebnis, würde man diese runden.
 Die ungenaueste Messung ist die von Argon.
 Dabei haben wir zuerst bei den großen Schwingungszahlen angefangen und zum Schluss waren die Einzelschwingungen dran.
 Also die umgekehrte Reihenfolge - im Gegensatz zu den beiden anderen Messungen.
 Es scheint, dass die zuerst gemachten Messungen ungenauer sind.
 Dies wirkt sich dann auf die vermeintlich genauen Messungen mit vielen Schwingungen aus.
 All dies kann man bei den Werten aus Tabelle \ref{tab:RuechardtGenauer} im Anhang nachvollziehen.\\
-Die Literaturwerte liegen jedoch nicht in den Fehlerintervallen.
-Die Fehler wurden also etwas unterschätzt.
+Da die Literaturwerte  jedoch nicht in den Fehlerintervallen liegen, wurden die Fehler etwas unterschätzt.
 
 \subsection{Clement-Desormes}
 Dieser Teilversuch liefert nicht so gute Ergebnisse für $\kappa$ von Luft.
