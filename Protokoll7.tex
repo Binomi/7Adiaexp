@@ -186,16 +186,17 @@ Dies vereinfacht die Darstellung von Gesetzen und ermöglicht es die Ideale Gasg
 \begin{align}
 	pV=Nk_BT=nRT\label{eq:ideal}
 \end{align}
-Hierbei ist die Anzahl der Teilchen N und die Boltzmannkonstante k$_B$ zusammengefasst zu R=N$_A$k$_B$, wobei N$_A$ die Advogardokonstante ist n die Stoffmenge.
+Hierbei ist die Anzahl der Teilchen N und die Boltzmannkonstante k$_B$ zusammengefasst zu R=N$_A$k$_B$, wobei N$_A$ die Advogardokonstante ist und n die Stoffmenge.
 \cite[S. 261]{gerthsen}
 
 \subsection{Zustandsänderung in Gasen}
-Die Ideale Gasgleichung \eqref{eq:ideal} gilt für ein ideales Gas immer, dennoch kann es sich auf verschiedene Zustandsänderungen verschieden verhalten.
-Bei z.B. bleibt der Druck p konstant, so ist das Volumen V proportional zur Temperatur T.
-Diese Zustandsänderung wird als Isobar bezeichnet.
-Bleibt hingegen das Volumen konstant, so spricht man von einer Isochoren Zustandsänderung.
+Die Ideale Gasgleichung \eqref{eq:ideal} gilt für ein ideales Gas immer, dennoch kann es sich bei verschiedenen Zustandsänderungen verschieden verhalten.
+Bleibt z.B.  der Druck p konstant, so ist das Volumen V proportional zur Temperatur T.
+Diese Zustandsänderung wird als isobar bezeichnet.
+Bleibt hingegen das Volumen konstant, so spricht man von einer isochoren Zustandsänderung.
 Die hier interessantere Änderung ist aber die adiabatische Änderung.
-Hierbei bleibt die Temperatur konstant und es ändern sich Druck und Volumen, doch das Verhältnis zwischen den beiden bleibt gleich.
+Hierbei bleibt die Temperatur konstant und es ändern sich Druck und Volumen, doch das Verhältnis %Produkt???
+zwischen den beiden bleibt gleich.
 Dies ist im allgemeinen sehr schwierig zu realisieren, doch es gibt mittlerweile recht gute Isolierungen, oder der Prozess, der adiabatisch ablaufen soll, wird sehr schnell ausgeführt.
 
 \subsection{Freiheitsgrade}
@@ -266,7 +267,7 @@ Zustand 2: V=$V_0+\Delta V$, p = b, T=$T_0-\Delta T$\\
 ZUstand 3: V=$V_0$, p=b, T=$T_0-\Delta T$\\
 Zustand 4: V=$V_0$, p=b+$\Delta p_2$, T=$T_0$\\
 
-Dadurch, dass wir adiabtisch von 1 nach 2 kommen könne wir die Poisson-Gleichung anwenden.
+Da der Prozess von 1 nach 2 adiabtisch abläuft, können wir die Poisson-Gleichung anwenden.
 \begin{align}
 	(b+\Delta p_1)V_0^\kappa &= b(V_0 + \Delta V)^\kappa\label{eq:vol}\\
 	(T_0-\Delta T)(V_0+\Delta V)^{\kappa-1}&=T_0\cdot v_0^{\kappa-1}\label{eq:temp}
@@ -279,9 +280,9 @@ So lassen sich jetzt auch die Gleichungen \eqref{eq:vol} und \eqref{eq:temp} wie
 \begin{align}
 	\frac{\Delta p_1}{b}&=\kappa\frac{\Delta V}{V_0}\\
 	\frac{\Delta T}{T_0}&=(\kappa-1)\frac{\Delta V}{V_0}\\
-	\Rightarrow \frac{\Delta T}{T_0}&=\frac{\kappa -1}{\kappa}\cdot\frac{\delta p_1}{b}\label{eq:ges}
+	\Rightarrow \frac{\Delta T}{T_0}&=\frac{\kappa -1}{\kappa}\cdot\frac{\Delta p_1}{b}\label{eq:ges}
 \end{align}
-Durch den Umstand, dass Zustand 3 in 4 isochor übergeht können wir beide mit der Ideal-Gasgleichung verknüpfen.
+Durch den Umstand, dass Zustand 3 in 4 isochor übergeht, können wir beide mit der Ideal-Gasgleichung verknüpfen.
 \begin{align}
 	\frac{b}{b+\Delta p_2}=\frac{T_0-\Delta T}{T_0}=1-\frac{\Delta T}{T_0}
 \end{align}
@@ -313,24 +314,25 @@ Hierzu wird das Regulierungsventil und das Entlüftungsventil aufgedreht.\\
 Ist dieser Vorgang abgeschlossen, so wird das Entlüftungsventil wieder geschlossen und anschließend das Regulierungsventil so eingestellt, dass sich der kleine Zylindrische Körper in einer gleichmäßigen Schwingung um die Lichtschranke befindet.
 Es werden jetzt, ohne die Gasregulierung stark zu ändern Messungen von 10 mal einer Schwingung und jeweils 3 mal von 10, 20, 50 und 100 Schwingungen durchgeführt.
 Hierzu muss nur die Lichtschranke bedient zu werden.
-Dies wird jetzt für die Gase Luft, C0$_2$ und Argon durchgeführt.
+Dies wird jetzt für die Gase Luft, CO$_2$ und Argon durchgeführt.
 Man beginnt jeweils wieder mit dem Durchspülen der Kugel.
 Es ist schließlich noch nötig die Masse des kleinen Körpers, der Rohrinnendurchmesser und das Volumen von Kolben und Rohr zu notieren.
+Diese Angaben sind auf dem Aufbau vermerkt.
 
 \subsection{Adiabatenexponent nach Clement-Desormes}
 \label{sec:clem}
 Der Versuchsaufbau ist ebenfalls in der Graphik \ref{fig:versuch} von oben zu sehen.
 Dieser Aufbau besteht aus einem großen Glaszylinder und einem Manometer.
-Zu dem gibt es noch ein Entlüftungs- und Verschlussventil und einen Blasebalg zum erzeugen des Drucks.\\
+Zu dem gibt es noch ein Entlüftungs- und Verschlussventil und einen Blasebalg zum Erzeugen des Drucks.\\
 Zu Beginn des Versuches ist das Verschlussventil zu öffnen und mit dem Blasebalg ein höherer Druck zu erzeugen.
 Ist der gewünschte Druck erreicht, so verschließt man das Verschlussventil und führe einen Temperaturausgleich durch.
-Für diesen, wird eine Weile lang gewartet, bis sich die Temperatur um Zylinder mit der, der Umwelt ausgeglichen hat.
+Für diesen, wird eine Weile lang gewartet, bis sich die Temperatur im Zylinder mit der der Umwelt ausgeglichen hat.
 Anschließend notiert man sich die Höhendifferenz auf dem Manometer.\\
 Es werden jetzt je 3 Messungen für verschiedene Öffnungszeiten des Entlüftungsventils gemacht.
 Hierzu wird dieses für ca. 0.1s, 1s und 5s geöffnet.
-Nach dem kurzen öffnen und schließen ist wieder ein Temperaturausgleich durch zu führen.
+Nach dem kurzen Öffnen und Schließen ist wieder ein Temperaturausgleich durch zu führen.
 Danach wird dann wieder die Höhendifferenz aufgeschrieben.
-Es wird wieder, wie oben geschrieben der Druck erhöht und mit der Messreihe fortgefahren, bis alle Messungen durchgeführt sind.
+Es wird wieder, wie oben geschrieben, der Druck erhöht und mit der Messreihe fortgefahren, bis alle Messungen durchgeführt sind.
 Wichtig ist hierbei stets den Temperaturausgleich zu machen und vor jeder neuen Messung neuen Druck auf zu bauen.
 
 \section{Auswertung}
